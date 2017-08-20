@@ -1,0 +1,16 @@
+{
+	"name" : "Adibaba/DeliciousExport",
+	"description" : "Parser for del.icio.us export files",
+	"authors" : [{
+			"name" : "Adrian Wilke",
+			"homepage" : "http://adrianwilke.de"
+		}
+	],
+	"keywords" : [
+		"del.icio.us",
+		"delicious",
+		"bookmarks",
+		"export"
+	],
+	"license" : "MIT"
+}

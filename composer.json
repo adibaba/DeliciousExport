@@ -12,5 +12,10 @@
 		"bookmarks",
 		"export"
 	],
-	"license" : "MIT"
+	"license" : "MIT",
+	"autoload" : {
+		"psr-4" : {
+			"Adibaba\\DeliciousExport" : "src"
+		}
+	}
 }

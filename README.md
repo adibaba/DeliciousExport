@@ -1,6 +1,8 @@
 # DeliciousExport
 
-Parser for del.icio.us export files
+The social bookmarking service Delicious ([del.icio.us](https://del.icio.us/)) was acquired by Pinboard (see [blog post](https://blog.pinboard.in/2017/06/pinboard_acquires_delicious/)) and is in read-only mode now.
+You can export your delicious bookmarks ([del.icio.us/export](https://del.icio.us/export)) and save them in a HTML file.
+This script parses those files.
 
 ## Example
 

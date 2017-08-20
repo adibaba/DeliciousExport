@@ -1,5 +1,5 @@
 {
-	"name" : "Adibaba/DeliciousExport",
+	"name" : "adibaba/delicious-export",
 	"description" : "Parser for del.icio.us export files",
 	"authors" : [{
 			"name" : "Adrian Wilke",

@@ -1,5 +1,5 @@
 <?php
-namespace Adibaba\DeliciousBookmarks\Export;
+namespace Adibaba\DeliciousExport;
 
 use DOMDocument;
 use Exception;

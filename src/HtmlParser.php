@@ -38,6 +38,12 @@ class HtmlParser
 
     /**
      *
+     * @var array Bookmark IDs
+     */
+    protected $bookmarkIdsWithoutTags;
+
+    /**
+     *
      * @var array Tags -> Array of bookmark IDs
      */
     protected $tags;
@@ -127,6 +133,16 @@ class HtmlParser
     }
 
     /**
+     * Gets array of IDs of bookmarks without tags
+     *
+     * @return array Bookmark IDs
+     */
+    public function getBookmarkIdsWithoutTags()
+    {
+        return $this->bookmarkIdsWithoutTags;
+    }
+
+    /**
      * Gets array of tags.
      * Every tag is represented as array with:
      * key: name of the tag
@@ -203,7 +219,11 @@ class HtmlParser
                 $tags = array();
                 
                 // Do not explode empty string
-                if (! empty($attributes[$key])) {
+                if (empty($attributes[$key])) {
+                    
+                    // Bookmark has no tags
+                    $this->bookmarkIdsWithoutTags[] = $index;
+                } else {
                     $tags = explode(',', $attributes[$key]);
                     $tags = array_map('trim', $tags);
                     

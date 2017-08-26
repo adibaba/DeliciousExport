@@ -28,4 +28,7 @@ This script parses those files.
     // Print your tags, sorted by number of containing bookmarks
     print_r($htmlParser->getTags($true));
     
+    // Print IDs of bookmarks without tags
+    print_r($htmlParser->getBookmarkIdsWithoutTags());
+    
     ?>

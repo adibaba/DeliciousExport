@@ -72,8 +72,11 @@ class HtmlParser
             throw new Exception('Can not read ' . $htmlFile);
         }
         $this->htmlFile = $htmlFile;
+        
         $this->bookmarks = array();
+        $this->bookmarkIdsWithoutTags = array();
         $this->tags = array();
+        
         $this->splitTags = false;
     }
 
@@ -97,6 +100,11 @@ class HtmlParser
      */
     public function parse()
     {
+        // Reset
+        $this->bookmarks = array();
+        $this->bookmarkIdsWithoutTags = array();
+        $this->tags = array();
+        
         // http://php.net/manual/en/class.domdocument.php
         $domDocument = new DOMDocument();
         $domDocument->loadHTMLFile($this->htmlFile, LIBXML_NOERROR | LIBXML_PARSEHUGE);
